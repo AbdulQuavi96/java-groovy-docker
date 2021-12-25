@@ -1,5 +1,5 @@
 node('master')   {
-      def dockerImageName= 'intdoc89/javadedockerapp_$JOB_NAME:$BUILD_NUMBER'
+      def dockerImageName= 'AbdulQuavi96/javadedockerapp_$JOB_NAME:$BUILD_NUMBER'
       stage('SCM Checkout'){
          git 'https://github.com/AbdulQuavi96/java-groovy-docker.git'          
       }
@@ -42,7 +42,7 @@ node('master')   {
                     //sh "${scriptRunner}"
                   //sh "sshpass -p ${dpPWD} ssh -o StrictHostKeyChecking=no ec2-user@13.127.81.47 ${dockerRun}"
                     //sh "${dockerRun}"
-                  sh "sudo kubectl apply -f app.yaml"
+                 
                     
             }
             
